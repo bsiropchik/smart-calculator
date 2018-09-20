@@ -1,26 +1,32 @@
 class SmartCalculator {
   constructor(initialValue) {
-    // your implementation
+    this.memory = `${initialValue}`;
+    this.valueOf = function(){return new Function('return ' + this.memory)()};
   }
 
   add(number) {
-    // your implementation
+    this.memory += `+${number}`;
+    return this
   }
   
   subtract(number) {
-    // your implementation
+    this.memory += `-${number}`;
+    return this
   }
 
   multiply(number) {
-    // your implementation
+    this.memory += `*${number}`;
+    return this
   }
 
   devide(number) {
-    // your implementation
+    this.memory += `/${number}`;
+    return this
   }
 
   pow(number) {
-    // your implementation
+    this.memory += `**${number}`;
+    return this
   }
 }
 
